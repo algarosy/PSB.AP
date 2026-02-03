@@ -6,11 +6,11 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/https://github.com/algarosy/PSB/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-title" content="PSB Putra" />
 <link rel="manifest" href="/https://github.com/algarosy/PSB/site.webmanifest" />
-    
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSB Asrama Putra Al-Garosy</title>
+    <title>PSB Putra</title>
     <style>
         body,
         html {
@@ -18,24 +18,32 @@
             padding: 0;
             height: 100%;
             overflow: hidden;
+            /* Mencegah scroll ganda */
+        }
+
+        .iframe-container {
+            width: 100%;
+            height: 100%;
+            position: relative;
         }
 
         iframe {
-            display: block;
             width: 100%;
-            height: 100vh;
+            /* Triknya disini: Tinggi ditambah 25px, lalu digeser ke atas 25px */
+            height: calc(100% + 24px);
+            position: absolute;
+            top: -24px;
+            /* Geser ke atas untuk menutupi banner Google */
             border: none;
         }
     </style>
 </head>
 
 <body>
-    <!-- Ganti URL di bawah dengan Link Script App Anda -->
-    <iframe
-        src="https://script.google.com/macros/s/AKfycbzLtSd8Fon6ArFTv2eWI51Faf6B1lyU-VEdT4aIIGjRqdkbm6qiNQQT7UQkFi_1CKOj/exec"></iframe>
+    <div class="iframe-container">
+        <!-- Ganti URL di bawah ini dengan URL Exec Google Apps Script Anda -->
+        <iframe src="https://script.google.com/macros/s/AKfycbzLtSd8Fon6ArFTv2eWI51Faf6B1lyU-VEdT4aIIGjRqdkbm6qiNQQT7UQkFi_1CKOj/exec"></iframe>
+    </div>
 </body>
 
 </html>
-
-
-
